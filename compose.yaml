@@ -1,0 +1,12 @@
+services:
+  golang:
+    build:
+      context: .
+      dockerfile: ./docker/golang/Dockerfile
+    container_name: golang
+    volumes:
+      - type: bind
+        source: .
+        target: /sample-go-graphql
+    tty: true
+    stdin_open: true
