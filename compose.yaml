@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: ./docker/golang/Dockerfile
     container_name: golang
+    command: go run ./server.go
     ports:
       - target: 8080
         host_ip: 127.0.0.1
