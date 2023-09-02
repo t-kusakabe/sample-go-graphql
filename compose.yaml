@@ -4,6 +4,12 @@ services:
       context: .
       dockerfile: ./docker/golang/Dockerfile
     container_name: golang
+    ports:
+      - target: 8080
+        host_ip: 127.0.0.1
+        published: 8080
+        protocol: tcp
+        mode: host
     volumes:
       - type: bind
         source: .
