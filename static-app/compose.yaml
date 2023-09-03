@@ -2,7 +2,7 @@ services:
   golang:
     build:
       context: .
-      dockerfile: ./docker/golang/Dockerfile
+      dockerfile: ../docker/golang/Dockerfile
     container_name: golang
     command: go run ./server.go
     ports:
