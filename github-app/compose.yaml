@@ -1,0 +1,19 @@
+services:
+  golang:
+    build:
+      context: .
+      dockerfile: ../docker/golang/Dockerfile
+    container_name: golang
+    command: go run ./server.go
+    ports:
+      - target: 8080
+        host_ip: 127.0.0.1
+        published: 8080
+        protocol: tcp
+        mode: host
+    volumes:
+      - type: bind
+        source: .
+        target: /sample-go-graphql
+    tty: true
+    stdin_open: true
