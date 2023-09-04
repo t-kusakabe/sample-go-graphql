@@ -1,4 +1,4 @@
-module github_app
+module github.com/t-kusakabe/sample-go-graphql/github-app
 
 go 1.21.0
 
